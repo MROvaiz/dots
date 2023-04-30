@@ -1,0 +1,61 @@
+{
+    "layer": "top",
+    "modules-left": ["wlr/workspaces", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "pulseaudio", "cpu", "memory", "bluetooth"],
+
+    "wlr/workspaces": {
+        "all-outputs": true,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch worksace e-1",
+        "on-scroll-down": "hyprctl dispatch worksace e+1",
+        "sort-by-number": true,
+
+    }, 
+    "tray": {
+        "spacing": 10,
+    },
+    "clock": {
+    	"timezone": "Asia/Kolkata",
+       "format": "{:%a, %b %d %I:%M %p}",
+       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "network": {
+	"tooltip": false,
+	"format-wifi": " {essid}",
+	"format-ethernet": " {ipaddr}",
+	"on-click": "kitty nmtui"
+    },
+    "pulseaudio": {
+	"tooltip": false,
+	"scroll-step": 5,
+	"format": "{icon} {volume}%",
+	"format-icons": {
+		"default": ["奄", "奔", "墳"]
+	},
+	"on-click": "pavucontrol"
+     },
+     "cpu": {
+     	"interval": 10,
+     	"format": " {usage}%",
+     	"max-length": 10
+     },
+     "memory": {
+	"tooltip": false,
+	"format": " {}%"
+     },
+     "bluetooth": {
+    	"format": " {status}",
+	"format-disabled": "",
+	"format-connected": " {num_connections} connected",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"on-click": "blueman-manager"
+    },
+    "hyprland/window": {
+	"format": "👉 {}",
+	"separate-outputs": true
+    },
+}
+

@@ -1,0 +1,1 @@
+sudo pacman -S steam discord firefox hyprland pipewire wireplumber xdg-desktop-portal-hyprland grim slurp swappy kitty rofi mako thunar pavucontrol bluez bluez-utils blueman pacman-contrib ttf-jetbrains-mono-nerd noto-fonts-emoji lxappearance xfce4-settings 
