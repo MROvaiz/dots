@@ -1,1 +1,7 @@
-./discord
+./.config/discord/*
+./.config/cef_user_data
+./.config/lutris/games
+./.config/lutris/runners
+./.config/menus
+./.config/pulse
+./.config/rlcone
