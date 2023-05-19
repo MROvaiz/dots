@@ -1,7 +1,14 @@
-./.config/discord/*
-./.config/cef_user_data
-./.config/lutris/games
-./.config/lutris/runners
-./.config/menus
-./.config/pulse
-./.config/rlcone
+.config/discord/*
+.config/cef_user_data/*
+.config/lutris/games/*
+.config/lutris/runners/*
+.config/menus/*
+.config/pulse/*
+.config/rclone/*
+.config/Code - OSS
+.config/PCSX2
+.config/Sandbox Interactive GmbH
+.config/unity3d
+.config/dconf/user
+.config/gtk-3.0/bookmarks
+.config/waybar/style.css.map

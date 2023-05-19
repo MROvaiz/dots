@@ -1,0 +1,26 @@
+[Unit]
+Description=RClone Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=notify
+Environment=RCLONE_CONFIG=/home/mro/.config/rclone/rclone.conf
+
+ExecStart=/usr/bin/rclone mount gdrive: /home/mro/gdrive \
+--allow-other \
+--cache-dir /home/mro/.cache/rclone \
+--vfs-cache-mode writes \
+--dir-cache-time 96h \
+--log-level INFO \
+--log-file /home/mro/.config/rclone/logs/rclone.log \
+--timeout 1h \
+--umask 002 \
+--rc
+ExecStop=/bin/fusermount -uz /home/mro/Gdrive
+Restart=on-failure
+User=mro
+Group=mro
+
+[Install]
+WantedBy=multi-user.target
