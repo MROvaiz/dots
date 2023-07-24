@@ -12,3 +12,7 @@
 .config/dconf/user
 .config/gtk-3.0/bookmarks
 .config/waybar/style.css.map
+.config/cef_user_data
+.config/menus
+.config/pulse
+.config/kitty/themes
